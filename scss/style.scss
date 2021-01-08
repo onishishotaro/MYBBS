@@ -43,6 +43,7 @@ h2 {
 }
 dt {
   font-weight: bold;
+  margin-right: 50px;
 }
 textarea {
   width: 80%;
@@ -62,6 +63,7 @@ dl {
     margin-top: 20px;
   }
 }
+
 .article-warp {
   article {
     &:not(:first-child) {

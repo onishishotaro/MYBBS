@@ -13,9 +13,12 @@
       </header>
       <main id="app">
         <h2>投稿機能</h2>
+        <div class="input_btn_wrap">
+          <a class="input_btn" href="index.php">一覧画面へ</a>
+        </div>
         <div class="inner">
           <form action="input_do.php" method="post">
-            <dl>
+            <dl class="flex">
               <dt>ニックネーム</dt>
               <dd>
                 <input type="text" name="name" v-model="name" />
