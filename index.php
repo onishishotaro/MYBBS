@@ -6,15 +6,17 @@
 
 </head>
 <?php
-require('dbconnect.php');
+require('dbconnect.php'); //DB読み込み
 
+//エラー対策
 if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])) {
   $page = $_REQUEST['page'];
 } else {
   $page = 1;
 }
-$start = 5 * ($page - 1);
 
+//5件ページネーション
+$start = 5 * ($page - 1);
 $memos = $db->prepare('SELECT * FROM items ORDER BY id DESC LIMIT ?,5');
 $memos->bindParam(1, $start, PDO::PARAM_INT);
 $memos->execute();

@@ -7,14 +7,13 @@
   <?php require('head.php'); ?>
 </head>
 <?php
+//エラー対策
 if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
   $id = $_REQUEST['id'];
   $memos = $db->prepare('SELECT * FROM items WHERE id=?');
   $memos->execute(array($id));
   $memo = $memos->fetch();
 }
-
-// var_dump($memo['name']);
 ?>
 
 <body>

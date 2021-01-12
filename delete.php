@@ -5,7 +5,8 @@
   <?php require('head.php'); ?>
 </head>
 <?php
-require('dbconnect.php');
+require('dbconnect.php'); //DB読み込み
+//エラー対策
 if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
   $id = $_REQUEST['id'];
   $statement = $db->prepare('DELETE FROM items WHERE id=?');
@@ -31,7 +32,3 @@ if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
 </body>
 
 </html>
-
-<!--
-
-<?php require_once(dirname(__FILE__) . '/inc.footer.php'); ?> -->

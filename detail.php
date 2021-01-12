@@ -5,7 +5,9 @@
   <?php require('head.php'); ?>
 
 </head>
+
 <?php
+//エラー対策
 require('dbconnect.php');
 $id = $_REQUEST['id'];
 if (!is_numeric($id) || $id <= 0) {
@@ -37,8 +39,6 @@ $memo = $memos->fetch();
       </main>
     </div>
   </wrapper>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>

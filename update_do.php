@@ -5,8 +5,8 @@
   <?php require('head.php'); ?>
 </head>
 <?php
-require('dbconnect.php');
-$statement = $db->prepare('UPDATE items SET text=? WHERE id=?');
+require('dbconnect.php'); //DB読み込み
+$statement = $db->prepare('UPDATE items SET text=? WHERE id=?'); //update文
 $statement->execute(array($_POST['memo'], $_POST['id']));
 ?>
 
